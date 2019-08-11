@@ -1,0 +1,6 @@
+strikerStrike
+defunctCoin
+none
+strike
+multiStrike
+redStrike
