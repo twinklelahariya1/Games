@@ -1,6 +1,6 @@
 package launcher;
 
-import operations.AlternatePlaying;
+import worker.AlternatePlaying;
 
 public class Main {
 
