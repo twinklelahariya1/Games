@@ -29,8 +29,8 @@ public class Compute {
 
 	public static void defunct_Coin(Players player, Coins coins) {
 		player.setPoints(player.getPoints() - 2);
+		coins.setBlack(coins.getBlack()-1);
 		coins.setFoulPoints(coins.getFoulPoints() + 1);
-		//missing condn//singleton
 	}
 
 	public static void none(Players player, Coins coins) {

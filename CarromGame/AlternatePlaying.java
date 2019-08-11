@@ -27,36 +27,27 @@ public class AlternatePlaying {
 
 	private static void turnAlternator(Players player1, Players player2) {
 
-		Coins coins =Coins.getInstance();
+		Coins coins = Coins.getInstance();
 
-		while (coins.getTotalCoinsOnBoard() != 0
+		while ((coins.getBlack() + coins.getRed() > 0)
 
-				|| !(player1.getPoints() >= 5 && player1.getPoints() - player2.getPoints() >= 3)
-				|| !(player2.getPoints() >= 5 && player2.getPoints() - player1.getPoints() >= 3)) {
-
-			if (coins.getTotalCoinsOnBoard() == 0) {
-				coins.setBlack(9);
-				coins.setRed(1);
-			}
+				&& !(player1.getPoints() >= 5 && player1.getPoints() - player2.getPoints() >= 3)
+				&& !(player2.getPoints() >= 5 && player2.getPoints() - player1.getPoints() >= 3)) {
+			System.out.println("totalblack::" + coins.getBlack());
+			System.out.println("totalred::" + coins.getRed());
 
 			LOGGER.log(Level.INFO, player1.getName() + "'s Turn");
-			PointsComputator.calculate(player1,coins);
+			PointsComputator.calculate(player1, coins);
 
-			if (coins.getTotalCoinsOnBoard() == 0
+			if ((coins.getBlack() + coins.getRed() > 0)
 
-					|| (player1.getPoints() >= 5 && player1.getPoints() - player2.getPoints() >= 3)
-					|| (player2.getPoints() >= 5 && player2.getPoints() - player1.getPoints() >= 3))
+					&& (player1.getPoints() >= 5 && player1.getPoints() - player2.getPoints() >= 3)
+					&& (player2.getPoints() >= 5 && player2.getPoints() - player1.getPoints() >= 3))
 				break;
 			LOGGER.log(Level.INFO, player2.getName() + "'s Turn");
-			PointsComputator.calculate(player2,coins);
-			if (coins.getTotalCoinsOnBoard() == 0
-
-					|| (player1.getPoints() >= 5 && player1.getPoints() - player2.getPoints() >= 3)
-					|| (player2.getPoints() >= 5 && player2.getPoints() - player1.getPoints() >= 3))
-				break;
+			PointsComputator.calculate(player2, coins);
 		}
 
-//		finally {
 		System.out.println("Player1 has:: " + player1.getPoints() + " Points");
 		System.out.println("Player 2 has:: " + player2.getPoints() + " Points");
 		if (player1.getPoints() > player2.getPoints() && (player1.getPoints() - player2.getPoints()) >= 3
@@ -68,7 +59,6 @@ public class AlternatePlaying {
 		} else {
 			LOGGER.log(Level.INFO, "Match Draw between" + player1.getName() + " and " + player2.getName());
 		}
-//		}
 
 	}
 

@@ -5,7 +5,6 @@ public class Coins {
 	private int black = 9;
 	private int red = 1;
 	private int striker = 1;
-	private int totalCoinsOnBoard = 10;
 
 	private int foulPoints = 0;
 
@@ -43,14 +42,6 @@ public class Coins {
 
 	public void setStriker(int striker) {
 		this.striker = striker;
-	}
-
-	public int getTotalCoinsOnBoard() {
-		return totalCoinsOnBoard;
-	}
-
-	public void setTotalCoinsOnBoard(int totalCoinsOnBoard) {
-		this.totalCoinsOnBoard = totalCoinsOnBoard;
 	}
 
 	public int getFoulPoints() {

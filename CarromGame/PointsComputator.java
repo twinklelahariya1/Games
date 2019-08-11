@@ -14,6 +14,7 @@ public class PointsComputator {
 		switch (choice) {
 		case 1:
 			AvailabilityCheck.availabilityOfBlack(player, coins);
+//			System.out.println("Blacks::" +coins.getBlack());
 			break;
 		case 2:
 			AvailabilityCheck.availabilityOfCoins(player, coins);
@@ -32,6 +33,7 @@ public class PointsComputator {
 			break;
 		default:
 			System.out.println("Wrong choice");
+			break;
 		}
 	}
 
