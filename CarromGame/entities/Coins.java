@@ -5,10 +5,21 @@ public class Coins {
 	private int black = 9;
 	private int red = 1;
 	private int striker = 1;
-
 	private int totalCoinsOnBoard = 10;
-	
-	private int foulPoints=0;
+
+	private int foulPoints = 0;
+
+	private static Coins object = null;
+
+	private Coins() {
+	}
+
+	public static Coins getInstance() {
+		if (object == null) {
+			object = new Coins();
+		}
+		return object;
+	}
 
 	public int getBlack() {
 		return black;

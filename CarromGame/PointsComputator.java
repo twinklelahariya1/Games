@@ -4,9 +4,8 @@ import entities.*;
 
 public class PointsComputator {
 
-	public static void calculate(Players player) {
+	public static void calculate(Players player, Coins coins) {
 
-		Coins coins = new Coins();
 		System.out.println("Enter choice 1. Strike\r\n" + "2. Multistrike\r\n" + "3. Red strike\r\n"
 				+ "4. Striker strike\r\n" + "5. Defunct coin\r\n" + "6. None");
 		Scanner scanner = new Scanner(System.in);

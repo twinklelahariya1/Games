@@ -8,6 +8,8 @@ public class AvailabilityCheck {
 		if(coins.getBlack()!=0) {
 			Compute.strike(player, coins);
 		}
+		else
+			return;
 	}
 	
 	
@@ -16,6 +18,8 @@ public class AvailabilityCheck {
 		if(coins.getRed()!=0) {
 			Compute.red_Strike(player, coins);
 		}
+		else
+			return;
 		
 	}
 
@@ -30,6 +34,8 @@ public class AvailabilityCheck {
 		if(coins.getBlack()>=numberOfCoins) {
 			Compute.multi_Strike(player, coins,numberOfCoins);
 		}
+		else
+			return;
 		
 	}
 	
