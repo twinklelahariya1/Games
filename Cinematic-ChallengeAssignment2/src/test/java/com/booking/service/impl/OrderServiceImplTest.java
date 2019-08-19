@@ -1,9 +1,9 @@
 package com.booking.service.impl;
 
+import com.booking.dao.OrderRepository;
+import com.booking.dao.SeatRepository;
 import com.booking.model.Order;
 import com.booking.model.Seat;
-import com.booking.repository.OrderRepository;
-import com.booking.repository.SeatRepository;
 import com.booking.service.OrderService;
 import org.junit.After;
 import org.junit.Assert;
